@@ -1,0 +1,70 @@
+{
+  "events": [
+    {
+      "tag": "Others",
+      "probability": 0,
+      "start_time": 0,
+      "end_time": 2
+    },
+    {
+      "tag": "Others",
+      "probability": 0,
+      "start_time": 1,
+      "end_time": 3
+    },
+    {
+      "tag": "Bird_chirp",
+      "probability": 0.363,
+      "start_time": 2,
+      "end_time": 4
+    },
+    {
+      "tag": "Others",
+      "probability": 0,
+      "start_time": 3,
+      "end_time": 5
+    },
+    {
+      "tag": "Dog_bark",
+      "probability": 0.815,
+      "start_time": 4,
+      "end_time": 6
+    },
+    {
+      "tag": "Dog_bark",
+      "probability": 0.921,
+      "start_time": 5,
+      "end_time": 7
+    },
+    {
+      "tag": "Bird_chirp",
+      "probability": 0.744,
+      "start_time": 6,
+      "end_time": 8
+    },
+    {
+      "tag": "Dog_bark",
+      "probability": 0.69,
+      "start_time": 6,
+      "end_time": 8
+    },
+    {
+      "tag": "Others",
+      "probability": 0,
+      "start_time": 7,
+      "end_time": 9
+    },
+    {
+      "tag": "Speech",
+      "probability": 0.764,
+      "start_time": 8,
+      "end_time": 10
+    },
+    {
+      "tag": "Female_speech",
+      "probability": 0.703,
+      "start_time": 8,
+      "end_time": 10
+    }
+  ]
+}

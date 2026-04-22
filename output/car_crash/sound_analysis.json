@@ -1,0 +1,196 @@
+{
+  "events": [
+    {
+      "tag": "Speech",
+      "probability": 0.904,
+      "start_time": 0,
+      "end_time": 2
+    },
+    {
+      "tag": "Male_speech",
+      "probability": 0.88,
+      "start_time": 0,
+      "end_time": 2
+    },
+    {
+      "tag": "Speech",
+      "probability": 0.752,
+      "start_time": 1,
+      "end_time": 3
+    },
+    {
+      "tag": "Male_speech",
+      "probability": 0.71,
+      "start_time": 1,
+      "end_time": 3
+    },
+    {
+      "tag": "Male_speech",
+      "probability": 0.821,
+      "start_time": 2,
+      "end_time": 4
+    },
+    {
+      "tag": "Speech",
+      "probability": 0.821,
+      "start_time": 2,
+      "end_time": 4
+    },
+    {
+      "tag": "Male_speech",
+      "probability": 0.786,
+      "start_time": 3,
+      "end_time": 5
+    },
+    {
+      "tag": "Speech",
+      "probability": 0.786,
+      "start_time": 3,
+      "end_time": 5
+    },
+    {
+      "tag": "Male_speech",
+      "probability": 0.917,
+      "start_time": 4,
+      "end_time": 6
+    },
+    {
+      "tag": "Speech",
+      "probability": 0.917,
+      "start_time": 4,
+      "end_time": 6
+    },
+    {
+      "tag": "Speech",
+      "probability": 0.954,
+      "start_time": 5,
+      "end_time": 7
+    },
+    {
+      "tag": "Male_speech",
+      "probability": 0.94,
+      "start_time": 5,
+      "end_time": 7
+    },
+    {
+      "tag": "Alarm",
+      "probability": 0.491,
+      "start_time": 5,
+      "end_time": 7
+    },
+    {
+      "tag": "Male_speech",
+      "probability": 0.698,
+      "start_time": 6,
+      "end_time": 8
+    },
+    {
+      "tag": "Speech",
+      "probability": 0.698,
+      "start_time": 6,
+      "end_time": 8
+    },
+    {
+      "tag": "Alarm",
+      "probability": 0.45,
+      "start_time": 6,
+      "end_time": 8
+    },
+    {
+      "tag": "Male_speech",
+      "probability": 0.499,
+      "start_time": 7,
+      "end_time": 9
+    },
+    {
+      "tag": "Speech",
+      "probability": 0.499,
+      "start_time": 7,
+      "end_time": 9
+    },
+    {
+      "tag": "Speech",
+      "probability": 0.678,
+      "start_time": 8,
+      "end_time": 10
+    },
+    {
+      "tag": "Male_speech",
+      "probability": 0.627,
+      "start_time": 8,
+      "end_time": 10
+    },
+    {
+      "tag": "Speech",
+      "probability": 0.752,
+      "start_time": 9,
+      "end_time": 11
+    },
+    {
+      "tag": "Male_speech",
+      "probability": 0.691,
+      "start_time": 9,
+      "end_time": 11
+    },
+    {
+      "tag": "Speech",
+      "probability": 0.845,
+      "start_time": 10,
+      "end_time": 12
+    },
+    {
+      "tag": "Male_speech",
+      "probability": 0.773,
+      "start_time": 10,
+      "end_time": 12
+    },
+    {
+      "tag": "Thud",
+      "probability": 0.989,
+      "start_time": 11,
+      "end_time": 13
+    },
+    {
+      "tag": "Tire_squeal",
+      "probability": 0.944,
+      "start_time": 11,
+      "end_time": 13
+    },
+    {
+      "tag": "Speech",
+      "probability": 0.703,
+      "start_time": 11,
+      "end_time": 13
+    },
+    {
+      "tag": "Male_speech",
+      "probability": 0.683,
+      "start_time": 11,
+      "end_time": 13
+    },
+    {
+      "tag": "Thud",
+      "probability": 0.981,
+      "start_time": 12,
+      "end_time": 14
+    },
+    {
+      "tag": "Tire_squeal",
+      "probability": 0.963,
+      "start_time": 12,
+      "end_time": 14
+    },
+    {
+      "tag": "Tire_squeal",
+      "probability": 0.99,
+      "start_time": 13,
+      "end_time": 15
+    },
+    {
+      "tag": "Alarm",
+      "probability": 0.413,
+      "start_time": 13,
+      "end_time": 15
+    }
+  ]
+}

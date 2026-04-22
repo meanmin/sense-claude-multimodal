@@ -1,0 +1,16 @@
+.env
+__pycache__/
+*.pyc
+venv/
+.venv/
+.DS_Store
+
+# Video files (too large for git)
+samples/*.mp4
+samples/*.avi
+samples/*.mkv
+samples/*.webm
+
+# Large output files (frames, audio)
+output/*/frames/
+output/*/audio.wav
