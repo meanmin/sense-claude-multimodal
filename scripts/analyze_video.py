@@ -124,7 +124,7 @@ def analyze_sound(audio_path: str) -> dict:
 def main():
     if len(sys.argv) < 3:
         print("Usage: python analyze_video.py <video_path> <scenario>")
-        print("  scenario: 'parking_accident' or 'home_intrusion'")
+        print("  scenario: 'car_crash', 'home_intrusion', 'pet_monitoring', or any custom name")
         sys.exit(1)
 
     video_path = sys.argv[1]

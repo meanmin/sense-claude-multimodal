@@ -4,14 +4,14 @@
 
 > Claude can see, but it can't hear. Cochl.Sense gives Claude ears.
 
-The value of multimodal analysis is not about seeing what a human can already see — it's about enabling **automated, real-time judgment** that neither sound nor vision alone can reliably make.
+The value of multimodal analysis is not about seeing what a human can already see — it's about enabling **automated judgment** that neither sound nor vision alone can reliably make.
 
 A dog barking without context? Probably normal. A dog on camera? Also normal. But a dog barking **and** scratching at the front door for 30 minutes? That's separation anxiety — and you should know about it.
 
 ### How It Works
 
 ```
-Video File (mp4)
+Video File (mp4, mkv, webm, avi, etc.)
   │
   ├── [Script] ffmpeg → Audio → Cochl.Sense API → Sound events (JSON)
   │                                                  (thud, tire squeal, siren, dog bark...)
@@ -71,10 +71,26 @@ Key sound events: `Dog_bark` (0.921), `Bird_chirp` (0.744), `Female_speech` (0.7
 
 #### Prerequisites
 
-- Python 3.9+
-- [ffmpeg](https://ffmpeg.org/) (`brew install ffmpeg` on macOS)
-- [Cochl.Sense API key](https://dashboard.cochl.ai)
-- [Claude Code](https://claude.ai/code) (for Vision analysis)
+- **Python 3.9+**
+- **ffmpeg**
+- **Cochl.Sense API key** — Free trial available at [dashboard.cochl.ai](https://dashboard.cochl.ai) (sign up and create a project to get your API key)
+- **Claude Code** — Install with `npm install -g @anthropic-ai/claude-code` (see [official docs](https://docs.anthropic.com/en/docs/claude-code/overview) for details)
+
+#### Install ffmpeg
+
+```bash
+# macOS
+brew install ffmpeg
+
+# Ubuntu / Debian
+sudo apt update && sudo apt install ffmpeg
+
+# Windows (with Chocolatey)
+choco install ffmpeg
+
+# Windows (with winget)
+winget install ffmpeg
+```
 
 #### Setup
 
@@ -85,7 +101,13 @@ cd sense-claude-multimodal
 
 # 2. Setup Python environment
 python3 -m venv venv
+
+# macOS / Linux
 source venv/bin/activate
+
+# Windows
+# venv\Scripts\activate
+
 pip install -r requirements.txt
 
 # 3. Configure API key
@@ -101,7 +123,7 @@ python scripts/analyze_video.py samples/your_video.mp4 car_crash
 python scripts/analyze_video.py samples/your_video.mp4 home_intrusion
 python scripts/analyze_video.py samples/your_video.mp4 pet_monitoring
 
-# Step 2: Open Claude Code and ask it to combine the results
+# Step 2: Open Claude Code in the project directory and ask it to combine the results
 # Example prompt:
 # "Look at the frames in output/car_crash/frames/
 #  and read the sound analysis in output/car_crash/sound_analysis.json.
@@ -109,6 +131,10 @@ python scripts/analyze_video.py samples/your_video.mp4 pet_monitoring
 ```
 
 You can use any scenario name — the script creates a folder for each.
+
+#### Supported Video Formats
+
+The script uses ffmpeg for extraction, so most video formats are supported: **mp4, mkv, webm, avi, mov, flv**, and more.
 
 ### Why Multimodal?
 
@@ -148,19 +174,22 @@ For **real-time edge deployment** on smart home devices, cameras, and IoT hardwa
 ```
 sense-claude-multimodal/
 ├── scripts/
-│   └── analyze_video.py          # Extracts audio/frames + Cochl.Sense analysis
-├── samples/                       # Video files (not tracked in git)
+│   └── analyze_video.py              # Extracts audio/frames + Cochl.Sense analysis
+├── samples/                           # Put your video files here
 ├── output/
 │   ├── car_crash/
-│   │   ├── sound_analysis.json   # Cochl.Sense results
-│   │   ├── frames/               # Extracted video frames
-│   │   └── combined_judgment.md  # Final multimodal assessment
+│   │   ├── sound_analysis.json       # Cochl.Sense results
+│   │   ├── sample_frames/            # Key frames for README
+│   │   ├── frames/                   # All extracted frames (git ignored)
+│   │   └── combined_judgment.md      # Final multimodal assessment
 │   ├── home_intrusion/
 │   │   ├── sound_analysis.json
+│   │   ├── sample_frames/
 │   │   ├── frames/
 │   │   └── combined_judgment.md
 │   └── pet_monitoring/
 │       ├── sound_analysis.json
+│       ├── sample_frames/
 │       ├── frames/
 │       └── combined_judgment.md
 ├── requirements.txt
