@@ -31,6 +31,10 @@ Try with any video — the script handles extraction and sound analysis automati
 
 #### Demo 1: Car Crash (Dashcam)
 
+| Before (normal driving) | After (collision detected) |
+|:-:|:-:|
+| ![before](output/car_crash/sample_frames/before.jpg) | ![after](output/car_crash/sample_frames/after.jpg) |
+
 | | Sound Only | Vision Only | **Sound + Vision** |
 |---|-----------|-------------|-------------------|
 | What we know | "Thud (98.9%) + Tire squeal (99%)" | "A car is sideways on the highway with debris" | **"Vehicle collision on highway at 11s — high-speed impact with road blockage, immediate danger of secondary collision"** |
@@ -39,6 +43,10 @@ Key sound events: `Thud` (0.989), `Tire_squeal` (0.990), `Alarm` (0.491)
 
 #### Demo 2: Smart Home — Intrusion Detection (CCTV)
 
+| Quiet (no activity) | Alert (person detected) |
+|:-:|:-:|
+| ![before](output/home_intrusion/sample_frames/before.jpg) | ![alert](output/home_intrusion/sample_frames/alert.jpg) |
+
 | | Sound Only | Vision Only | **Sound + Vision** |
 |---|-----------|-------------|-------------------|
 | What we know | "Siren detected (~57%)" | "A person near a residential property" | **"Security alarm triggered while unidentified person near home — possible intrusion attempt"** |
@@ -46,6 +54,10 @@ Key sound events: `Thud` (0.989), `Tire_squeal` (0.990), `Alarm` (0.491)
 Key sound events: `Siren` (0.570) at 15-22s, coinciding with unidentified person on camera
 
 #### Demo 3: Smart Home — Pet Monitoring (Pet Cam)
+
+| Watching (dog on porch) | Playing (normal activity) |
+|:-:|:-:|
+| ![watching](output/pet_monitoring/sample_frames/watching.jpg) | ![playing](output/pet_monitoring/sample_frames/playing.jpg) |
 
 | | Sound Only | Vision Only | **Sound + Vision** |
 |---|-----------|-------------|-------------------|
